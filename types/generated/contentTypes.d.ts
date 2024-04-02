@@ -362,31 +362,31 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiHomeHero1HomeHero1 extends Schema.CollectionType {
-  collectionName: 'home_hero_1s';
+export interface ApiHomeHeroHomeHero extends Schema.CollectionType {
+  collectionName: 'home_heroes';
   info: {
-    singularName: 'home-hero-1';
-    pluralName: 'home-hero-1s';
-    displayName: 'Home-Hero-1';
+    singularName: 'home-hero';
+    pluralName: 'home-heroes';
+    displayName: 'HomeHero';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Header1: Attribute.RichText;
-    Header2: Attribute.RichText;
-    Header3: Attribute.RichText;
+    Investments: Attribute.RichText;
+    Pensions: Attribute.RichText;
+    WealthSolutions: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::home-hero-1.home-hero-1',
+      'api::home-hero.home-hero',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::home-hero-1.home-hero-1',
+      'api::home-hero.home-hero',
       'oneToOne',
       'admin::user'
     > &
@@ -830,7 +830,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::home-hero-1.home-hero-1': ApiHomeHero1HomeHero1;
+      'api::home-hero.home-hero': ApiHomeHeroHomeHero;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
