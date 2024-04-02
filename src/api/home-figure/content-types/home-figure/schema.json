@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_figures",
+  "info": {
+    "singularName": "home-figure",
+    "pluralName": "home-figures",
+    "displayName": "HomeFigure",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Section1Heading1": {
+      "type": "richtext"
+    },
+    "Section1Text1": {
+      "type": "richtext"
+    },
+    "Section2Heading2": {
+      "type": "richtext"
+    },
+    "Section2Text2": {
+      "type": "richtext"
+    },
+    "Section3Heading3": {
+      "type": "richtext"
+    },
+    "Section3Text3": {
+      "type": "richtext"
+    },
+    "Section4Heading4": {
+      "type": "richtext"
+    },
+    "Section4Text4": {
+      "type": "richtext"
+    },
+    "Section5Heading5": {
+      "type": "richtext"
+    },
+    "Section5Text5": {
+      "type": "richtext"
+    },
+    "Section6Heading6": {
+      "type": "richtext"
+    },
+    "Section6Text6": {
+      "type": "richtext"
+    }
+  }
+}

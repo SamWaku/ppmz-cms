@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_figures_section1_section1s",
+  "info": {
+    "displayName": "Section1",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Section1": {
+      "type": "richtext"
+    },
+    "Section2": {
+      "type": "richtext"
+    },
+    "Section3": {
+      "type": "richtext"
+    },
+    "Section4": {
+      "type": "richtext"
+    },
+    "Section5": {
+      "type": "richtext"
+    },
+    "Section6": {
+      "type": "richtext"
+    }
+  }
+}
