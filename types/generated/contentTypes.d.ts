@@ -362,80 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiHomeFigureHomeFigure extends Schema.CollectionType {
-  collectionName: 'home_figures';
-  info: {
-    singularName: 'home-figure';
-    pluralName: 'home-figures';
-    displayName: 'HomeFigure';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Section1Heading1: Attribute.RichText;
-    Section1Text1: Attribute.RichText;
-    Section2Heading2: Attribute.RichText;
-    Section2Text2: Attribute.RichText;
-    Section3Heading3: Attribute.RichText;
-    Section3Text3: Attribute.RichText;
-    Section4Heading4: Attribute.RichText;
-    Section4Text4: Attribute.RichText;
-    Section5Heading5: Attribute.RichText;
-    Section5Text5: Attribute.RichText;
-    Section6Heading6: Attribute.RichText;
-    Section6Text6: Attribute.RichText;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::home-figure.home-figure',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::home-figure.home-figure',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHomeHeroHomeHero extends Schema.CollectionType {
-  collectionName: 'home_heroes';
-  info: {
-    singularName: 'home-hero';
-    pluralName: 'home-heroes';
-    displayName: 'HomeHero';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Investments: Attribute.RichText;
-    Pensions: Attribute.RichText;
-    WealthSolutions: Attribute.RichText;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::home-hero.home-hero',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::home-hero.home-hero',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -862,6 +788,80 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiHomeFigureHomeFigure extends Schema.CollectionType {
+  collectionName: 'home_figures';
+  info: {
+    singularName: 'home-figure';
+    pluralName: 'home-figures';
+    displayName: 'HomeFigure';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Section1Heading1: Attribute.RichText;
+    Section1Text1: Attribute.RichText;
+    Section2Heading2: Attribute.RichText;
+    Section2Text2: Attribute.RichText;
+    Section3Heading3: Attribute.RichText;
+    Section3Text3: Attribute.RichText;
+    Section4Heading4: Attribute.RichText;
+    Section4Text4: Attribute.RichText;
+    Section5Heading5: Attribute.RichText;
+    Section5Text5: Attribute.RichText;
+    Section6Heading6: Attribute.RichText;
+    Section6Text6: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-figure.home-figure',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-figure.home-figure',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomeHeroHomeHero extends Schema.CollectionType {
+  collectionName: 'home_heroes';
+  info: {
+    singularName: 'home-hero';
+    pluralName: 'home-heroes';
+    displayName: 'HomeHero';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Investments: Attribute.RichText;
+    Pensions: Attribute.RichText;
+    WealthSolutions: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-hero.home-hero',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-hero.home-hero',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -872,8 +872,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::home-figure.home-figure': ApiHomeFigureHomeFigure;
-      'api::home-hero.home-hero': ApiHomeHeroHomeHero;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -882,6 +880,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::home-figure.home-figure': ApiHomeFigureHomeFigure;
+      'api::home-hero.home-hero': ApiHomeHeroHomeHero;
     }
   }
 }
