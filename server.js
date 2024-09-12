@@ -1,22 +1,16 @@
-import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
+// @ts-nocheck
+// Import the Strapi factory function
+const strapi = require("@strapi/strapi");
 
-const app = express();
+// Asynchronously initialize and start Strapi
+async function startStrapi() {
+  try {
+    const app = await strapi().load();
+    app.listen(1337);
+    console.log("Strapi is running on port 1337");
+  } catch (error) {
+    console.error("Failed to start Strapi:", error);
+  }
+}
 
-// Manually define __dirname for ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Serve static files from the 'dist' directory
-app.use(express.static(path.join(__dirname, "build")));
-
-// All other routes should serve the index.html
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
-
-const port = process.env.PORT || 8080;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+startStrapi();
